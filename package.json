@@ -1,0 +1,46 @@
+{
+  "name": "react-pagination-master",
+  "license": "MIT",
+  "description": "One of the smallest, most flexible and simplest Pagination packages for the React framework. Full root control in Pagination fully automatically without refreshing the page 👨‍💻",
+  "author": {
+    "name": "Mohammad Hossein Khadem al Mahdi",
+    "email": "khadem13359@gmail.com"
+  },
+  "keywords": [
+    "react-pagination",
+    "pagination",
+    "react-pagination-main",
+    "react-pagination-master",
+    "paginator",
+    "react",
+    "library-pagination",
+    "library-react-pagination"
+  ],
+  "private": false,
+  "version": "3.0.5",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/khadem-mh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadem-mh/react-pagination-master"
+  },
+  "main": "./dist/pagination.umd.js",
+  "module": "./dist/pagination.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "path": "^0.12.7"
+  }
+}
