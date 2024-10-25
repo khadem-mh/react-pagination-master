@@ -16,34 +16,29 @@
 
 - For each page, the data of the same page is received from the server and displayed in the DOM
 
+
+- Route Protection and transferring the user from the wrong path to the right path
+
+<p align=center>
+<img src="https://github.com/khadem-mh/pictures/blob/khadem/route.gif?raw=true">
+</p>
+
 ## View of the Library
+
 <img src="https://github.com/khadem-mh/pagination-react/blob/main/public/Video/page-1.gif" width="1000">
 <img src="https://github.com/khadem-mh/pagination-react/blob/main/public/Images/modes.png?raw=true" width="1000">
 
-## Usage ✍
-- Install Package
+## Note Important
+This package is provided as ES Module by default. However, if you need to use the 
+**[UMD version](https://github.com/khadem-mh/react-pagination-master)**, you can download it from our GitHub repository.
+
+## Install
+Use npm to install the package:
 ```bash
-npm i react-pagination-master
-```
-- Import the pagination component first.
-```javascript
-import Pagination from 'react-pagination-master'
-```
-- Then enter these essential items to launch pagination
-```javascript
-<Pagination
-    arrDatas={dataPage}
-    countItems={10}
-    countDataPerPage={1}
-    pathName={'/panel/users/'}
-    onFilterDatas={({ showDatasInDOM, activePage }) => {
-      setActivePage(activePage)          // Necessary
-      setFilterDataPage(showDatasInDOM) // Necessary
-    }}
-/>
+npm install react-pagination-master
 ```
 
-# Ready Example
+## Ready Example
 ```javascript
 import { useState, useEffect } from 'react'
 import Pagination from 'react-pagination-master'
@@ -108,6 +103,7 @@ export default function App() {
 | `countDataPerPage`| `Number`   | **_Required_**  | On each page you want to show multiple items |
 | `pathName`        | `String`   | **_Required_**  | The URL that your product is located in. |
 | `activePage`      | `Number`   | **_Optional_**  | Selecting the active page as soon as the page is loaded for the user |
+| `textActivePage`  | `String`   | **_Optional_**  | New* : An arbitrary word like page to indicate the active page in the URL |
 | `onFilterDatas`   | `Function` | **_Required_**  | The return function contains arguments to handle pages |
 
 ### ╔╚ `onFilterDatas` ╝╗
@@ -170,6 +166,10 @@ return (
 | `color`         | `String`  | **_Optional_** | ⚪ ⚫ 🔴 🔵 ...              |
 | `colorActive`   | `String`  | **_Optional_** | ⚪ ⚫ 🔴 🔵 ...              |
 ___
+
+If you have questions or need more help, check out the official documentation or contact support.
+Email: khadem13359@gmail.com
+
 <img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/2024-10-01_17-25-38.png" width="1000"/>
 
 >### Social Network
