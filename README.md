@@ -1,8 +1,16 @@
-<img src="https://github.com/khadem-mh/pagination-react/blob/main/public/Images/master.png?raw=true" width="1000">
+<img src="https://github.com/khadem-mh/pictures/blob/khadem/master-m.png?raw=true" width="1000">
+
+<p align=center>
+<img src="https://github.com/khadem-mh/pictures/blob/khadem/finger.png?raw=true" width="250">
+</p>
 
 # A quick look
 
 - One of the smallest, most flexible and simplest Pagination packages for the React framework. Full root control in Pagination fully automatically without refreshing the page 👨‍💻
+
+- Can be used in React and TypeScript programs or React and TypeScript integration
+
+- There is no need to install a separate file for typescript and types, everything is here
 
 - Full control of root and URL on every page
 
@@ -38,18 +46,26 @@ Use npm to install the package:
 npm install react-pagination-master
 ```
 
-## Ready Example
+## Ready Example Tsx and Jsx
 ```javascript
 import { useState, useEffect } from 'react'
 import Pagination from 'react-pagination-master'
 
 export default function App() {
   
-  // (necessary) The initial values ​​must be as below ✍️       |||
-  const [dataPage, setDataPage] = useState([])                //\\ Your Datas   
-  const [filterDataPage, setFilterDataPage] = useState([])   //  \\ Filter Datas
-  const [activePage, setActivePage] = useState(null)        //    \\ Active Page
-  const [isLoading, setIsLoading] = useState(null)         //      \\ Status Loading Datas
+  // (necessary) The initial values ​​must be as below ✍️ ( Jsx | Tsx )
+  
+  // Jsx
+  const [dataPage, setDataPage] = useState([])                        // Your Datas
+  const [filterDataPage, setFilterDataPage] = useState([])            // Filter Datas
+  const [activePage, setActivePage] = useState(null)                  // Active Page
+  const [isLoading, setIsLoading] = useState(null)                    // Status Loading Datas
+  
+  // Tsx
+  const [dataPage, setDataPage] = useState<any[]>([]);                // Your Datas
+  const [filterDataPage, setFilterDataPage] = useState<any[]>([]);    // Filter Datas
+  const [activePage, setActivePage] = useState<number | null>(null);  // Active Page              
+  const [isLoading, setIsLoading] = useState<boolean | null>(null);   // Status Loading Datas      
 
   useEffect(() => {
     if (activePage) {
@@ -94,8 +110,8 @@ export default function App() {
   )
 }
 ```
-## Package Logic Props 👨‍💻
 
+## Package Logic Props 👨‍💻
 | Parameter         | Type       | Field Status    | Description              |
 | :--------         | :-------   | :------         | :-------------------------------- |
 | `arrDatas`        | `Array`    | **_Required_**  | Array of products or anything else |
@@ -107,7 +123,6 @@ export default function App() {
 | `onFilterDatas`   | `Function` | **_Required_**  | The return function contains arguments to handle pages |
 
 ### ╔╚ `onFilterDatas` ╝╗
-
 `onFilterDatas` is a return function from the package side that returns 3 arguments and you must extract the same names as below from the input argument
 
 | Parameter         | Type       | Field Status    | Description              |
@@ -117,7 +132,6 @@ export default function App() {
 | `isLoading`       | `Boolean`  | **_Optional_**  | Loading is shown to the user until the data of that page is fully loaded |
 
 For example:
-
 ```javascript
 onFilterDatas={({ showDatasInDOM, activePage, isLoading }) => {
     setActivePage(activePage)          // Necessary

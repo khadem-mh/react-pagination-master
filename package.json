@@ -17,10 +17,11 @@
     "library-react-pagination"
   ],
   "private": false,
-  "version": "3.2.0",
+  "version": "3.3.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "homepage": "https://github.com/khadem-mh",
   "repository": {
@@ -29,6 +30,7 @@
   },
   "main": "./dist/pagination.umd.js",
   "module": "./dist/pagination.es.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
